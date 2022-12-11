@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span> <i class="fas fa-align-justify"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                  
+                        <li><a class="getstarted scrollto cnav" href="/"> Inicio </a></li>
+
+                        <li><a class="nav-link scrollto cnav " href="/venta/"> En
+                                Venta</a></li>
+                        <li><a class="nav-link scrollto cnav" href="/arriendo/"> En
+                                Arriendo</a></li>
+                        <li><a class="nav-link   scrollto cnav" href="/nosotros/"> Sobre
+                                Nosotros</a></li>
+                        <li><a class="nav-link   scrollto cnav" href="/servicios/">
+                                En Servicios</a></li>
+
+                        <li><a class="nav-link scrollto cnav" href="/contacto/">
+                                Contacto</a></li>
+                 
+                </ul>
+            </div>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+
+
+    
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div id="fondo"></div>
+                        <div class="carrusel-edit-img-servicios">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block desing-message">
+                            <h5> Mejorando cada dia </h5>
+                            <p> Vamos por el mejor servicio y mejor calidad juntos </p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        
+    
+
+        <div class="topmarginInicio_xp"></div>
+
+
+        <div class="contenedor">
+            <div class="center-data">
+                <h1>Conoce nuestos servicios</h1>
+                <div class="linea-decorativa1"></div>
+            </div>
+            <br>
+
+            <div class="row">
+               
+                
+                <div class="col-lg-5 col-md-12 col-sm-12 col-12 mx-auto edit-text-service my-3">
+                    <img src="{% static 'img/iconos/icon2.png' %}" class="img-edit-red" alt="">
+                    <h2>Venta de Propiedades</h2>
+                    <p>Somos Altamira Gestión Inmobiliaria Ltda., una empresa líder en gestión inmobiliaria, con más de 20 años de experiencia
+                    en la I Región, nos distinguimos por la constante preocupación en ofrecer a nuestros clientes una atención personalizada
+                    y la más completa asesoría en la compra venta de bienes inmuebles, desarrollando una amplia gama de servicio orientados
+                    a satisfacer las necesidades tanto de personas como de empresas, suministrando, entregando información oportuna y
+                    eficiente, herramientas técnicas y de asesoría profesional, a través de su equipo multidisciplinario de compuesto de
+                    agentes inmobiliarios, administrativos, abogados, constructores y arquitectos.</p>
+                    <a href="#" class="btn btn-primary btn-conf">Informacion completa</a>
+                </div>
+                <br>
+                <div class="col-lg-5 col-md-12 col-sm-12 col-12 mx-auto edit-text-service my-3">
+                    <img src="{% static 'img/iconos/icon3.png' %}" class="img-edit-red" alt="">
+                    <h2>Arriendo de Propiedades</h2>
+                    <p>El área de Arriendos y Administración de ALTAMIRA GESTIÓN INMOBILIARIA LIMITADA, es una plataforma conformada por un
+                    equipo de profesionales y ejecutivos multidisciplinarios con dedicación exclusiva para das soporte a las necesidades y
+                    requerimientos de nuestros clientes, siendo nuestro principal objetivo que usted tenga la confianza que su propiedad y
+                    patrimonio se encuentra en manos de profesionales.
+                    Nuestros servicios se componen de dos fases:
+                    Fase 1: Servicio de Gestión Inmobiliaria
+                    Fase 2: Servicio Administración mensual</p>
+                    <a href="#" class="btn btn-primary btn-conf">Informacion completa</a>
+                </div>
+
+            </div>
+
+            <br> 
+
+       
+
+        </div>
+
+    <div class="topmarginInicio_xp"></div>
+
+
+
+{% endblock content %}

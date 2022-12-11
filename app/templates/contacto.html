@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span> <i class="fas fa-align-justify"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
+                        <li><a class="getstarted2 scrollto cnav2" href="/"> Inicio </a></li>
+
+                        <li><a class="nav-link scrollto cnav2 " href="/venta/"> En
+                                Venta</a></li>
+                        <li><a class="nav-link scrollto cnav2" href="/arriendo/"> En
+                                Arriendo</a></li>
+                        <li><a class="nav-link   scrollto cnav2" href="/nosotros/"> Sobre
+                                Nosotros</a></li>
+                        <li><a class="nav-link   scrollto cnav2" href="/servicios/">
+                                En Servicios</a></li>
+
+                        <li><a class="nav-link scrollto cnav2" href="/contacto/">
+                                Contacto</a></li>
+              
+                </ul>
+            </div>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+<div class="espacio"></div>
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mx-auto ">
+            <div class="content-cad shadow">
+                <h2>Informacion de contacto de la empresa</h2>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <p><i class="fas fa-check-circle text-success mt-1 mr-2"></i> Unlimited access to the top 3,500+ courses </p>
+                    </div>
+                    <div class="col">
+                        <p><i class="fas fa-check-circle text-success mt-1 mr-2"></i> Actionable learning insights Beta </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p><i class="fas fa-check-circle text-success mt-1 mr-2"></i> Unlimited access to the top 3,500+ courses </p>
+                    </div>
+                    <div class="col">
+                        <p><i class="fas fa-check-circle text-success mt-1 mr-2"></i> Actionable learning insights Beta </p>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                    
+                        <div class="map-responsive">
+                            <iframe class="map-desing"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1596.8426991346967!2d-73.049953!3d-36.826058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b5d04f2b98bb%3A0x10ddfc512b45e970!2zQW5pYmFsIFBpbnRvIDUxNiwgQ29uY2VwY2nDs24sIELDrW8gQsOtbw!5e0!3m2!1ses-419!2scl!4v1620504914234!5m2!1ses-419!2scl"
+                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 mx-auto">
+
+            <div class="content-cad shadow">
+                <h2>Formulario de contacto</h2>
+                <br>
+
+                <form class="form-group" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                
+                        <div class="col-md-6">
+                            <input type="text" name="name"  class="form-control" placeholder="Nombre" required
+                                autofocus>
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="phone"  class="form-control" placeholder="Numero de Telefono" required
+                                autofocus>
+                            <br>
+                        </div>
+                
+                        <div class="col-md-12 topmargin-xs">
+                            <input type="email" name="email"  class="form-control" placeholder="Email" required
+                                autofocus>
+                            <br>
+                        </div>
+                        <div class="col-md-12 topmargin-xs">
+                            <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Asunto"
+                                required autofocus></textarea>
+                            <br>
+                        </div>
+                
+                        <div class="col-md-12 topmargin-xs">
+                            <input type="submit" class="btn btn-primary full-width">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

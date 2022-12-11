@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span> <i class="fas fa-align-justify"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
+                        <li><a class="getstarted2 scrollto cnav2" href="/"> Inicio </a></li>
+
+                        <li><a class="nav-link scrollto cnav2 " href="/venta/"> En
+                                Venta</a></li>
+                        <li><a class="nav-link scrollto cnav2" href="/arriendo/"> En
+                                Arriendo</a></li>
+                        <li><a class="nav-link   scrollto cnav2" href="/nosotros/"> Sobre
+                                Nosotros</a></li>
+                        <li><a class="nav-link   scrollto cnav2" href="/servicios/">
+                                En Servicios</a></li>
+
+                        <li><a class="nav-link scrollto cnav2" href="/contacto/">
+                                Contacto</a></li>
+               
+                </ul>
+            </div>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+
+<div class="espacio"></div>
+<div class="container">
+    <h1>Casas en Venta: </h1>
+    <br>
+
+    <div class="row">
+        {% if servicios %}
+        {% for ser in servicios %}
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 my-2">
+            <div class="card shadow">
+     
+                {% if ser.img_principal %}
+                    <div class="zoom-desing img-fluid">
+                        <img src="{{ser.img_principal.url}}" class="card-img-top resize-img" alt="...">
+                    </div>
+                {% endif %}
+                <div class="card-body">
+                
+                    <h5 class="card-title"> <strong>{{ser.title}} </strong> </h5>
+                    <p class="text-color"> ${{ser.price}} </p>
+                    <p class="card-text text-description"> <i class="fas fa-house-user"></i> {{ser.m2_construction}} - {{ser.region}} -
+                        {{ser.town}} - {{ser.sector}}</p>
+                
+                    <div class="row">
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                            <p style="font-size: 12px;"><i class="fas fa-bed"></i> {{ser.n_room}}</p>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 move-right">
+                            <p style="font-size: 12px;"><i class="fas fa-bath"></i> {{ser.n_bath}} </p>
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 move-right2">
+                            <p style="font-size: 12px;"><i class="fas fa-house-user"></i> {{ser.m2_construction}}</p>
+                        </div>
+                        <div class="col-5 col-sm-5 col-md-5 col-lg-5"></div>
+                        <!--
+                                                <div class="col-5 col-sm-5 col-md-5 col-lg-5">
+                                                    
+                                                    <a href="{{ser.id}}" class="btn btn-primary btn-conf float-end">Informacion completa</a>
+                                                    
+                                                </div>
+                                                -->
+                    </div>
+                
+                </div>
+        
+            </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <h1> No se han encontrado resultados </h1>
+        <div class="alto-div"></div>
+        {% endif %}
+
+    </div>
+
+
+</div>
+
+
+
+
+<div class="topmarginInicio_xp"></div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://acobot.ai/js/w?key=5.8Eh0ZX4VZVAdl2dI"></script>
+
+<head>
+    {% include 'snippets/head.html' %}
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+</head>
+
+<body>
+    <div class="container-pd">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <br>
+
+    <footer">
+        {% include 'snippets/footer.html' %}
+    </footer>
+
+</body>
+
+</html>

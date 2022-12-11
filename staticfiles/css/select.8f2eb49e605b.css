@@ -1,0 +1,379 @@
+/*Definiendo size para las h y p de la pagina*/
+
+
+
+
+/* Select  **/
+/*the container must be positioned relative:*/
+
+.select-prosition{
+  height: 100px;  
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  width:330px;
+}
+
+
+@media only screen and (max-width: 1374px) {
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+    width: 290px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+    width: 330px;
+    top: 30px;
+    margin: 0 auto;
+  }
+}
+
+select {
+  display: none; /*hide original SELECT element:*/
+  background-color: transparent;
+}
+
+
+
+.select-selected {
+  background-color: white;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #6bc1e9 transparent transparent transparent;
+
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent rgb(17, 0, 255) transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  color: #6bc1e9;
+}	
+
+
+.select-prosition {
+    margin-top: -280px;
+    margin-bottom: 220px;
+
+}
+
+.btn-search{ 
+  position: relative;
+  text-align: center;
+  height: 42px;
+  padding: 8px;
+  cursor: pointer;
+  min-width:250px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .select-prosition {
+      margin-top: -200px;
+      margin-bottom: 220px;
+
+  }
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .btn-search{ 
+    position: relative;
+    text-align: center;;
+    height: 42px;
+    padding: 8px;
+    cursor: pointer;
+    top: 70%;
+  }
+   .btn-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .btn-container button {
+    width: 330px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 732px) {
+  .btn-container {
+    margin-top: 34px;
+    text-align: center;
+  }
+
+}
+
+
+
+.select-prosition .btn-search a{
+    color: white;
+}
+
+/*Clases correspondientes a detail.*/
+
+.price-desing p{
+  color: rgb(51, 41, 118);
+  font-size: 25px;
+}
+
+.linea2{
+	background-color: black;
+	width: 200px;
+	height: 2px;
+	margin-bottom: 15px;
+}
+
+
+/* cabecera de prueba */
+
+.head-desing {
+  height:60vh;
+  width: 100%;
+  background-image: url("../img/servicios.51bd18848c35.jpg");
+  padding: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+
+  background-color: rgb(100, 100, 100);
+  background-blend-mode: soft-light;
+}
+
+.head-desing h3{
+  font-size: 22px;
+}
+
+.head-desing p{
+  font-size: 16px;
+}
+
+.head-desing button {
+  width: 180px;
+}
+
+
+/* Response Map contact*/
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+/* card detail :*/
+.redimention-img {
+  height: 600px;
+}
+
+.redimention-img img {
+  height: 550px;
+}
+
+@media only screen and (max-width: 732px) {
+  .redimention-img {
+    height: 400px;
+  }
+
+  .redimention-img img {
+    height: 150px;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .redimention-img {
+    height: 500px;
+  }
+
+  .redimention-img img {
+    height: 450px;
+  }
+}
+
+/* Estos son los marcos de la pagina detail */
+
+.content-cad {
+  background-color:white;
+  padding: 20px 50px;
+  width: auto;
+}
+
+
+
+
+.center-data {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+/* linea decorativa despues del titulo */
+.center-data .linea-decorativa1 {
+  background-color: rgb(33, 33, 179);
+  width: 300px;
+  height: 2px;
+}
+
+
+
+.head-desing-home1 {
+  height:75vh;
+  width: 100%;
+  background-image: url("../img/servicios.51bd18848c35.jpg");
+  padding: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+
+  background-color: rgb(100, 100, 100,0.2);
+  background-blend-mode: soft-light;
+}
+
+
+.head-desing-home2 {
+  height:75vh;
+  width: 100%;
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_960_720.jpg');
+  padding: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+
+  background-color: rgb(100, 100, 100,0.2);
+  background-blend-mode: soft-light;
+}
+
+
+.head-desing-home3 {
+  height:75vh;
+  width: 100%;
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/28/12/10/chairs-2181947_960_720.jpg');
+  padding: 1px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+
+  background-color: rgb(100, 100, 100,0.5);
+  background-blend-mode: soft-light;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .head-desing-home1 {
+    height:100vh;
+    width: 100%;
+    background-image: url("../img/servicios.51bd18848c35.jpg");
+    padding: 1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+
+    background-color: rgb(100, 100, 100,0.2);
+    background-blend-mode: soft-light;
+  }
+  .head-desing-home2 {
+    height:100vh;
+    width: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_960_720.jpg');
+    padding: 1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+
+    background-color: rgb(100, 100, 100,0.2);
+    background-blend-mode: soft-light;
+  }
+
+  .head-desing-home3 {
+    height:100vh;
+    width: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/28/12/10/chairs-2181947_960_720.jpg');
+    padding: 1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+
+    background-color: rgb(100, 100, 100,0.5);
+    background-blend-mode: soft-light;
+  }
+}

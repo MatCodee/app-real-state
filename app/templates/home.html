@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'components/Header.html' %}
+
+
+
+<div class="container-bg-img position-relative">
+    <div class="container-content w-50">
+        <h2 class="h1 mb-4 fw-bold">Choose Your luxurious room</h2>
+        <div class="d-flex gap-3">
+            <button class="bg-dark text-white rounded-pill px-4 py-2">Start Now</button>
+            <button class="bg-transparent rounded-pill border border-1 border-dark px-4 py-2">Read more</button>            
+        </div>
+    </div>
+
+    <div class="container-card-filter bg-white">
+        <form action="#">
+            <div class="row w-100 h-100">
+                <div class="col bg-white">
+                    <div class="container-select">
+                        <div class="container-select-card">
+                            <div class="content-select">
+                                <label>Location</label>
+                                <i class="bi bi-chevron-down"></i>
+                            </div>
+                            <span>Seleccionar</span>
+
+                            <div class="card-filter">
+                                <div class="item">
+                                    <p>Lista 1</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lista 2</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lista 3</p>
+                                </div>
+                                <div class="item">
+                                    <p>Lista 4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col bg-white">
+
+                </div>
+                <div class="col bg-white">
+     
+                </div>
+                <div class="col bg-dark text-white">
+                    Book Now
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<!--
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+                
+                <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span> <i class="fas fa-align-justify" aria-hidden="true"></i></span>
+                </button>
+                
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                    
+                        <li><a class="getstarted scrollto cnav" href="/"> Inicio </a></li>
+
+                        <li><a class="nav-link scrollto cnav " href="/venta/"> En
+                                Venta</a></li>
+                        <li><a class="nav-link scrollto cnav" href="/arriendo/"> En
+                                Arriendo</a></li>
+                        <li><a class="nav-link   scrollto cnav" href="/nosotros/"> Sobre
+                                Nosotros</a></li>
+                        <li><a class="nav-link   scrollto cnav" href="/servicios/">
+                                En Servicios</a></li>
+
+                        <li><a class="nav-link scrollto cnav" href="/contacto/">
+                                Contacto</a></li>
+                  
+                </ul>
+                </div>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+     
+    </div>
+</header>
+--->
+
+<!--
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div id="fondo"></div>
+        <div class="carousel-item active carrusel-edit-img">
+            <div class="head-desing-home1"></div>
+        </div>
+        <div class="carousel-item carrusel-edit-img">
+            <div class="head-desing-home2"></div>
+        </div>
+        <div class="carousel-item carrusel-edit-img">
+            <div class="head-desing-home3"></div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+--->
+
+<!-- 
+<div class="container select-prosition">
+    <div class="carousel-caption desing-message2">
+            <h5> Aumenta en felicidad </h5>
+            <p> A un paso de mejorar cada vez mas </p>
+                        
+    </div>
+
+    <form method="get">
+        <div class="row">
+            
+            <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto my-2">
+                <div class="custom-select">
+                        {{form.type_p}}
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto my-2">
+                <div class="custom-select"> {{form.region}} </div>
+            </div>
+
+
+            <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto my-2">
+                <div class="custom-select"> {{form.operation}} </div>
+            </div>
+
+            <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto my-2">
+                <div class="btn-container">
+                <button class="btn btn-lg btn-primary btn-search" type="submit"> Buscar </button>
+                </div>
+            </div>
+        </div>
+
+       
+    </form>
+</div>
+-->
+
+
+
+<!--
+<div class="container">
+    <div class="center-data">
+
+        <h3>Propiedades Mas Relevantes</h3>
+        <div class="linea-decorativa1"></div>
+    </div>
+    <br>
+
+    <div class="row">
+        {% for ser in servicios %}
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4 my-2">
+                <div class="card shadow">
+                    {% if ser.img_principal %}
+                        <div class="zoom-desing img-fluid ">
+                            
+                            <a href="{{ser.id}}"> <img src="{{ser.img_principal.url}}" class="card-img-top resize-img" alt="..."> </a>
+                            
+                        </div>
+      
+                  
+
+                    {% endif %}
+                    <div class="card-body">
+                        
+                            <h5 class="card-title"> <strong>{{ser.title}} </strong> </h5>
+                            <p class="text-color"> ${{ser.price}} </p>
+                            <p class="card-text text-description"> <i class="fas fa-house-user"></i> {{ser.m2_construction}} - {{ser.region}} - {{ser.town}} - {{ser.sector}}</p>
+                            
+                            <div class="row">
+                                <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                                    <p style="font-size: 12px;"><i class="fas fa-bed"></i> {{ser.n_room}}</p>
+                                </div>
+                                <div class="col-2 col-sm-2 col-md-2 col-lg-2 move-right">
+                                    <p style="font-size: 12px;"><i class="fas fa-bath"></i> {{ser.n_bath}} </p>
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 move-right2">
+                                    <p style="font-size: 12px;"><i class="fas fa-house-user"></i> {{ser.m2_construction}}</p>
+                                </div>
+                                <div class="col-5 col-sm-5 col-md-5 col-lg-5"></div>
+                            </div>
+                       
+                    </div>
+
+                </div>
+            </div>            
+        {% endfor %}
+
+    </div>
+</div>
+
+-->
+<div class="head-desing mt-5">
+ <h3> Contáctanos  </h3>
+ <p> Acerca tu propiedad a quienes buscan un hogar </p>
+ <a href="/contacto/" class="btn btn-primary"> Contactar </a>
+</div>
+
+<div class="menostop_xp"></div>
+
+{% endblock content %}
+
+

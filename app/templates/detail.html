@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+        <nav id="navbar" class="navbar navbar-expand-lg ">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span> <i class="fas fa-align-justify"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
+                        <li><a class="getstarted2 scrollto cnav2" href="/"> Inicio </a></li>
+
+                        <li><a class="nav-link scrollto cnav2 " href="/venta/"> En
+                                Venta</a></li>
+                        <li><a class="nav-link scrollto cnav2" href="/arriendo/"> En
+                                Arriendo</a></li>
+                        <li><a class="nav-link   scrollto cnav2" href="/nosotros/"> Sobre
+                                Nosotros</a></li>
+                        <li><a class="nav-link   scrollto cnav2" href="/servicios/">
+                                En Servicios</a></li>
+
+                        <li><a class="nav-link scrollto cnav2" href="/contacto/">
+                                Contacto</a></li>
+                        </ul>
+            </div>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+
+
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+
+<div class="espacio"></div>
+<div class="container">
+    
+    <div class="row my-2">
+        {% if servicios %}
+        <div class="col-xl-5 col-xxl-5 col-lg-5 col-md-5 col-sm-12 col-12 mx-auto my-2">
+            <h1><i class="fas fa-laptop-house"></i> {{ servicios.title }}</h1>
+            <div class="linea2"></div>
+        </div>
+        <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-12 col-12 mx-auto my-2">
+            <div class="price-desing">
+                <p>Código: {{servicios.code}} </p>
+            </div>
+        </div>
+        <div class="col-xl-4 col-xxl-4 col-lg-4 col-md-4 col-sm-12 col-12 mx-auto my-2">
+            
+            <div class="price-desing">
+                 <p>Valor: <i class="fas fa-tags"></i> {{servicios.price}}</p>
+            </div>
+        </div>
+       
+        {% endif %}
+    </div>
+
+
+    <div class="row">
+        <div class="left-column col-12 col-lg-8 ">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    {% if primera_imagen %}
+                        <div class="carousel-item active redimention-img">
+                            <img src="{{primera_imagen.image.url}}" class="d-block w-100" alt="...">
+                        </div>
+                    {% endif %}
+                    {% if servicio_imagen %}
+                        {% for i in servicio_imagen %}
+                            <div class="carousel-item redimention-img">
+                                <img src="{{i.image.url}}" class="d-block w-100" alt="...">
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="right-column col-12 col-lg-4 d-lg-flex d-none flex-column">
+            <div class="content-cad shadow">
+                <h2>DETALLES DE LA PROPIEDAD</h2>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <p> <i class="fas fa-bath"></i>  BAÑOS:
+                            &ensp; {{servicios.n_bath}} &ensp;  <i class="fas fa-check"></i> </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p> <i class="fas fa-bed"></i> DORMITORIOS:
+                            &ensp; {{servicios.n_room}} &ensp; <i class="fas fa-check"></i> </p>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p> <i class="fas fa-bacon"></i>TERRENO:
+                            &ensp; {{servicios.m2_terrain}} &ensp; <i class="fas fa-check"></i> </p>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p> <i class="fas fa-house-user"></i> CONSTRUIDOS:
+                            &ensp; {{servicios.m2_construction}} &ensp; <i class="fas fa-check"></i> </p>
+                    </div>
+
+                </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="left-column col-lg-8 ">
+
+            <div class="content-cad shadow">
+                {% if servicios %}
+                <div class="row my-3">
+                    <div class="col my-3">
+                
+                        <h2> Descripcción </h2>
+                        <p> {{servicios.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topmarginInicio"></div>
+            <div class="content-cad shadow">
+                <h2> Información </h2>
+                <div class="linea2"></div>
+                
+                <div class="row">
+                    <div class="col">
+                        
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Mts. cuadrados construidos:
+                            {{servicios.m2_construction}} m² </p>
+                    </div>
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Mts. cuadrados de terreno:
+                            {{servicios.m2_terrain}} m²</p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Largo: {{servicios.height}} m</p>
+                    </div>
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Ancho: {{servicios.width}} m</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Baños :
+                            {{servicios.n_bath}} </p>
+                    </div>
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Dormitorios :
+                            {{servicios.n_room}} </p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Numero de Pisos: {{servicios.n_parking}} </p>
+                    </div>
+                    <div class="col">
+                        <p> <i class="fas fa-check-circle text-success mt-1 mr-2"></i> Numero de Estacionamiento: {{servicios.n_flat}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            {% endif %}
+
+        </div>
+        <div class="right-column col-lg-4 d-lg-flex d-none flex-column">
+            
+            
+            <div class="content-cad shadow">
+                <h2> Contáctanos </h2>
+                <div class="form">
+                    <form class="form-group" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+            
+                            <div class="p-2">
+                                <input type="text" name="name" class="form-control" placeholder="Nombre y Apellido" required
+                                    autofocus>
+                            </div>
+                            <div class="p-2">
+                                <input type="text" name="phone" class="form-control" placeholder="Telefono" required autofocus>
+                            </div>
+            
+                            <div class="topmargin-xs p-2">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+                            </div>
+                            <div class="topmargin-xs p-2">
+                                <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Asunto" required
+                                    autofocus></textarea>
+                            </div>
+            
+                            <div class="col-md-12 topmargin-xs">
+                                <input type="submit" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="topmarginInicio"></div>
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div id="fondo"></div>
+            <div class="carrusel-edit-img-servicios">
+            </div>
+            <div class="carousel-caption d-none d-md-block desing-message">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="menostop_xp"></div>
+
+
+
+{% endblock %}
